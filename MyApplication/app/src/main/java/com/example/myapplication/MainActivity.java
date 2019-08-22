@@ -47,41 +47,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public static String formatKCBVol(long vol) {
-        double dVol = vol;
-        if (true) {
-            dVol = vol / 100.0;
-            if (vol > 0 && vol < 10000) {
-                return new DecimalFormat("#0.00").format(dVol) + "";
-            } else if (vol >= 10000 && vol < 100000) {
-                return new BigDecimal(dVol).setScale(1,BigDecimal.ROUND_DOWN)+"";
-            }
-        }
-        return vol+"";
-    }
-
-    public static double parse(long vol) {
-        return (double) 100 / 100 / 2;
-    }
-
-    public static String formatVol(long vol) {
-        String totalhand;
-        totalhand = String.valueOf(vol);
-        if (vol <= 0)
-            return "--";
-        else if (totalhand.length() > 6)
-            if (vol % 10000 >= 5000) {
-                return (vol / 10000 + 1) + "万";
-            } else {
-                return (vol / 10000) + "万";
-            }
-        else if (totalhand.length() == 6) {
-            DecimalFormat df = new DecimalFormat("#0.0");
-            return df.format(vol / 10000.0) + "万";
-        } else {
-            return totalhand;
-        }
-    }
 
     public static String test(Boolean istrue) {
         if (istrue != null)
@@ -93,41 +58,6 @@ public class MainActivity extends AppCompatActivity {
         return "c";
     }
 
-    public static String formatVolumnNew(long vol, boolean isKCB, int formatType) {
-        double dVol = vol;
-        if (isKCB) {
-//            return "科创板";
-            dVol = vol / 100.0;
-            if (vol > 0 && vol < 10000) {
-                return new DecimalFormat("#0.00").format(dVol) + "";
-            } else if (vol >= 10000 && vol < 100000) {
-                return new BigDecimal(""+dVol).setScale(1,BigDecimal.ROUND_DOWN)+"";
-            }
-        }
-        // 手 不足一手部分直接舍去
-        vol = (long) dVol;
-        switch (formatType) {
-//            case FORMAT_LEFT_VOLUMN:
-//                return formatLeftVolumn(vol);
-//            case FORMAT_VOLUMN1:
-//                return formatVolumn1(vol);
-//            case FORMAT_MONEYOUTER2:
-//                return formatMoneyOuter2(vol);
-//            case FORMAT_STR_VOLUMN:
-//                return "" + vol;
-//            case FORMAT_MONEYOUTER:
-//                return formatMoneyOuter(vol);
-//            case FORMAT_VOLUMN2:
-//            case FORMAT_VOLUMN:
-//                return formatVolumn2(vol);
-//            case FORMAT_VOL:
-//                return formatVol(vol);
-//            case FORMAT_VOLUMN:
-//                return formatVolumn(vol);
-        }
-
-        return "" + vol;
-    }
 
     
 
