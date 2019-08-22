@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
         return "c";
     }
 
-
+    public void testGit(){
+        Log.d(TAG, "testGit: ");
+    }
     
 
 }
