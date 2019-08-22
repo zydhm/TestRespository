@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
     
     public void test2(){
-        Log.d(TAG, "test2: git conflict test");
+        Log.d(TAG, "test2: git conflict tect");
     }
     
 
