@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
     
     public void test2(){
-        Log.d(TAG, "test2: git stash pop tect");
+        Log.d(TAG, "test2: git stash pop te10t");
     }
     
 
